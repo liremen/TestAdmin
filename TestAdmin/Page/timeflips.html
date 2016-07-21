@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        #wrapper li{
+            list-style-type:none;
+            line-height:30px;
+        }
+        .border {
+            border: 1px solid #0094ff;
+        }
+        .dj-box{
+            width:100px;
+            padding:2px 2px 2px 2px;
+            display:block;
+        }
+        .w-30{
+            width:30px;
+        }
+        .center{
+            text-align:center;
+        }
+    </style>
+    <script src="../Scripts/jquery-1.8.2.js"></script>
+    <script>
+        (function ($) {
+            $.fn.timeflips = function (options,cb) {
+                var $ele = $(this);
+
+                var settings = {
+                    date: null,
+                    format:true
+                };
+
+                var configs = $.extend({}, settings, options);
+
+                function countDown() {
+
+                    eventDate = new Date(configs.date).getTime()/1000;
+                    currentDate = Math.floor($.now() / 1000);
+
+                    //如果倒计时到0 停止运行
+                    if (eventDate <= currentDate) {
+                        clearInterval(interval)
+                    }
+
+
+                    seconds = eventDate - currentDate;//秒
+
+                    days = Math.floor(seconds / (60 * 60 * 24));//天数
+                    seconds -= days * 60 * 60 * 24;
+
+                    hours = Math.floor(seconds / (60 * 60));//小时
+                    seconds -= hours * 60 * 60;
+
+                    minutes = Math.floor(seconds / 60);//
+                    seconds -= minutes * 60;
+
+                    if (configs.format) {
+                        days = (String(days).length >= 2) ? days : "0" + days;
+                        hours = (String(hours).length >= 2) ? hours : "0" + hours;
+                        minutes = (String(minutes).length >= 2) ? minutes : "0" + minutes;
+                        seconds = (String(seconds).length >= 2) ? seconds : "0" + seconds;
+                    }
+
+                    if (!isNaN(eventDate)) {
+                        $ele.find(".days").val(days);
+                        $ele.find(".hours").val(hours);
+                        $ele.find(".minutes").val(minutes);
+                        $ele.find(".seconds").val(seconds);
+                    } else {
+                        console.log("结束日期格式输入错误");
+                        clearInterval(interval);
+                    }
+                }
+
+                countDown();
+
+                interval = setInterval(countDown, 1000);
+            }
+        })(jQuery);
+
+        function getTime() {
+            var time = $("#inputTime").val();
+            
+            $("#timeLeft").timeflips({ date: time });
+        }
+    </script>
+</head>
+<body>
+    <div id="wrapper" class="border">
+        <ul>
+            <li>
+                <h5>倒计时</h5>
+            </li>
+            <li>
+                输入结束时间：<input type="text" id="inputTime" /> <input type="button" value="确认" onclick="getTime()" />
+            </li>
+            <li id="timeLeft">
+                离结束仅剩 <input type="text" class="w-30 center days" value="" /> 天 
+                <input type="text" class="w-30 center hours" value="" /> 小时 
+                <input type="text" class="w-30 center minutes" value="" /> 分 
+                <input type="text" class="w-30 center seconds" value="" /> 秒
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

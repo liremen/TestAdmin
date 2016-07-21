@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c8447c2031034233bc9edf7d609cf26b" Name="Diagram1">
+        <EntityTypeShape EntityType="CommonCRMModel.Department" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommonCRMModel.Employee" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommonCRMModel.PerBtnRelationship" Width="1.5" PointX="12" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommonCRMModel.PermissionBtn" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommonCRMModel.PermissionMenu" Width="1.5" PointX="9.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommonCRMModel.PermissionSpecialBtn" Width="1.5" PointX="12" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommonCRMModel.Role" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommonCRMModel.RolePerRelationship" Width="1.5" PointX="14.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommonCRMModel.WorkFLow" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommonCRMModel.WorkFlowApply" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommonCRMModel.WorkFlowApplyDetail" Width="1.5" PointX="7.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommonCRMModel.WorkFlowBLLBranchNode" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommonCRMModel.WorkFlowNode" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommonCRMModel.WorkFlowNodeRole" Width="1.5" PointX="5.25" PointY="14.625" IsExpanded="true" />
+        <AssociationConnector Association="CommonCRMModel.FK_Employee_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_Role_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_Employee_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_WorkFlowApply_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_WorkFlowApplyDetail_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_PerBtnRelationship_Permission" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_PerBtnRelationship_PermissionBtn" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_按钮对应权限_URL" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_RolePerRelationship_PermissionBtn" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_PermissionSpecialBtn_PermissionMenu" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_RolePerRelationship_Permission1" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_特殊按钮权限_url" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_RolePerRelationship_PermissionSpecialBtn" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_RolePerRelationship_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_WorkFlowNodeRole_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_WorkFlowApply_WorkFLow" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_WorkFlowNode_WorkFLow" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_WorkFlowApply_WorkFlowNode" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_WorkFlowApplyDetail_WorkFlowApply" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_WorkFlowApplyDetail_WorkFlowNode" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_WorkFlowBLLBranchNode_WorkFlowNode" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_WorkFlowBLLBranchNode_WorkFlowNode1" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_WorkFlowNode_WorkFlowNode" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_WorkFlowNode_WorkFlowNode1" ManuallyRouted="false" />
+        <AssociationConnector Association="CommonCRMModel.FK_WorkFlowNodeRole_WorkFlowNode" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

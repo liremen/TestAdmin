@@ -1,0 +1,106 @@
+﻿@model TestAdmin.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Employee</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Department.depName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Department.depName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Role.roleName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Role.roleName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empCnName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empCnName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empLoginName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empLoginName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empLoginPwd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empLoginPwd)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empSex)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empSex)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empAge)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empAge)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empCellPhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empCellPhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empPhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empPhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empIsDel)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empIsDel)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empAddTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empAddTime)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

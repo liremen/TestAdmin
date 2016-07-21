@@ -1,0 +1,105 @@
+﻿@model IEnumerable<TestAdmin.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.empId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department.depName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Role.roleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empCnName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empLoginName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empLoginPwd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empSex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empCellPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empIsDel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empAddTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.empId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department.depName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Role.roleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empCnName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empLoginName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empLoginPwd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empSex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empCellPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empIsDel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empAddTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
